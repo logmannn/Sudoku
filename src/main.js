@@ -1,5 +1,5 @@
 // import { journal, vowelCount, consonantCount, getTeaser} from './journal';
-
+import {checkSolution} from './sudoku.js';
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
@@ -17,19 +17,6 @@ $(document).ready(function() {
     8, "_", "_", 2, "_", 3, "_", "_", 9,
     "_", "_", 5, "_", 1, "_", 3, "_", "_"
   ];
-
-  // var sudokuSoluution = [
-    // 4, 8, 3, 9, 2, 1, 6, 5, 7,
-    // 9, 6, 7, 3, 4, 5, 8, 2, 1,
-    // 2, 5, 1, 8, 7, 6, 4, 9, 3,
-    // 5, 4, 8, 1, 3, 2, 9, 7, 6,
-    // 7, 2, 9, 5, 6, 4, 1, 3, 8,
-    // 1, 3, 6, 7, 9, 8, 2, 4, 5,
-    // 3, 7, 2, 6, 8, 9, 5, 1, 4,
-    // 8, 1, 4, 2, 5, 3, 7, 6, 9,
-    // 6, 9, 5, 4, 1, 7, 3, 8, 2
-  // ];
-
   var sudokuItem = 0;
   var row = 0;
   var j = 9;
@@ -62,19 +49,8 @@ $(document).ready(function() {
     j = j-1;
   }
 
-  // $('#journal-form').submit(function(event) {
-  //   event.preventDefault();
-  //   // var title = $('#title').val();
-  //   // var description = $('#description').val();
-  //   // var output = journal(description);
-  //   // var vowels = vowelCount(description);
-  //   // var consonants = consonantCount(description);
-  //   // var teaser = getTeaser(description);
-  //   // // output.forEach(function(element) {
-  //   // $('#solution').append("<li>Word count: " + output + "</li>");
-  //   // $('#vowelCount').append("<li>Vowel count: " + vowels + "</li>");
-  //   // $('#numOfCons').append("<li>Consonant count: " + consonants + "</li>");
-  //   // $('#numOfCons').append("<li>All words in a sentence: " + teaser + "</li>");
-  //   // // });
-  // });
+  $('#sudokuSolution').submit(function(event) {
+    event.preventDefault();
+    checkSolution();
+  });
 });
