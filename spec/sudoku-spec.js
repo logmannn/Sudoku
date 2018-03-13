@@ -35,14 +35,9 @@ describe('checkSolution', function(){
 //   var count = 0;
 //   var i = 0;
 //   sudokuSolution.forEach(function() {
-//     if (count == 0 && i == 0) {
-//       count = 0;
-//     } else {
-//       count += 1;
-//     }
-//
-//     if (i < 9) {
+//     if (i <= 8) {
 //       tempRow.push(sudokuSolution[count]);
+//       count += 1;
 //       i = i + 1;
 //     }
 //     else {
