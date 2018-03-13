@@ -1,5 +1,6 @@
 // import { journal, vowelCount, consonantCount, getTeaser} from './journal';
-import {checkSolution} from './sudoku.js';
+// import {checkSolution} from './sudoku.js';
+import {processSolution} from './sudoku.js';
 import $ from 'jquery';
 import 'bootstrap';
 import './styles.css';
@@ -51,6 +52,6 @@ $(document).ready(function() {
 
   $('#sudokuSolution').submit(function(event) {
     event.preventDefault();
-    checkSolution();
+    processSolution();
   });
 });
